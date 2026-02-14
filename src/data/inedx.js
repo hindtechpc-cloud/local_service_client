@@ -21,6 +21,30 @@ export const serviceCardsData = [
       "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
     btnText: "Join Now",
     heading: "Journalist Hub",
-    desc: "A dedicated platform for journalists to publish, manage, and distribute news content efficiently.",
+    desc: "A dedicated platform for journalists to publish, manage, and A dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, and distribute news content efficiently.",
+  },
+  {
+    id: 4,
+    image:
+      "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
+    btnText: "Join Now",
+    heading: "Journalist Hub",
+    desc: "A dedicated platform for journalists to publish, manage, and A dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, and distribute news content efficiently.",
+  },
+  {
+    id: 5,
+    image:
+      "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
+    btnText: "Join Now",
+    heading: "Journalist Hub",
+    desc: "A dedicated platform for journalists to publish, manage, and A dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, and distribute news content efficiently.",
+  },
+  {
+    id: 6,
+    image:
+      "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
+    btnText: "Join Now",
+    heading: "Journalist Hub",
+    desc: "A dedicated platform for journalists to publish, manage, and A dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, andA dedicated platform for journalists to publish, manage, and distribute news content efficiently.",
   },
 ];
