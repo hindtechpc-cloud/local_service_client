@@ -61,7 +61,7 @@ export function Navbar() {
             <NavigationMenuLink asChild>
               <Link
                 className="focus:text-red-500 focus:underline no-underline"
-                to="/booking"
+                to="/my-bookings"
               >
                 Booking
               </Link>

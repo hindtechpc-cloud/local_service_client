@@ -15,8 +15,10 @@ import {
   Star,
   ShieldCheck,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfessionalProfile() {
+  const navigate= useNavigate();
   return (
     <div className="min-h-screen bg-[#f5f7f6]">
       {/* DESKTOP CONTAINER */}
@@ -201,6 +203,7 @@ export default function ProfessionalProfile() {
         <Button
           size="lg"
           className="bg-teal-700 hover:bg-teal-800 text-white px-10 py-6 rounded-2xl text-lg shadow-xl hover:shadow-2xl transition-all"
+          onClick={()=>navigate("/book-serviceman")}
         >
           Book Now
           <CalendarDays className="ml-3 h-5 w-5" />

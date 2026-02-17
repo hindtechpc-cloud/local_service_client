@@ -44,7 +44,7 @@ export default function ServicesSection() {
               key={index}
               className="flex flex-col items-center text-center group cursor-pointer"
               onClick={() => {
-                navigate(`/your-serviceman/${service.name}`);
+                navigate(`/services/${service.name}`);
               }}
             >
               {/* Icon Box */}
