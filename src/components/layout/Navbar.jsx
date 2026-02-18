@@ -13,9 +13,12 @@ import { Link } from "react-router-dom";
 import { SidebarSection } from "./Sidebar";
 export function Navbar() {
   const [isSidebar, setIsSidebar] = useState(false);
+  const visibility = isSidebar
+    ? "md:hidden block bg-gray-100"
+    : "md:hidden block";
+
   return (
     <div>
-     
       <div
         className={
           isSidebar
@@ -86,7 +89,12 @@ export function Navbar() {
         </NavigationMenu>
       </div>
       {isSidebar && (
-        <SidebarSection isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
+        <div
+          isSidebar={isSidebar}
+          className={`${visibility} fixed z-50 w-48  h-screen flex flex-col items-center justify-between  top-0 left-0 bg-white shadow-md p-4 `}
+        >
+          <SidebarSection isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
+        </div>
       )}
     </div>
   );

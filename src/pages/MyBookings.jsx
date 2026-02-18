@@ -9,6 +9,7 @@ export default function MyBookings() {
   const bookings = [
     {
       id: 1,
+      image:"https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/14235/production/_100058428_mediaitem100058424.jpg",
       status: "PENDING",
       category: "upcoming",
       title: "Plumbing Repair",
@@ -19,6 +20,7 @@ export default function MyBookings() {
     },
     {
       id: 2,
+      image:"https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/14235/production/_100058428_mediaitem100058424.jpg",
       status: "ACCEPTED",
       category: "ongoing",
       title: "Calculus Tutoring",
@@ -29,6 +31,7 @@ export default function MyBookings() {
     },
     {
       id: 3,
+      image:"https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/14235/production/_100058428_mediaitem100058424.jpg",
       status: "COMPLETED",
       category: "history",
       title: "Light Installation",

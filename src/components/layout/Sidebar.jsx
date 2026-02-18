@@ -9,13 +9,10 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo.jpeg";
 
-export function SidebarSection({ isSidebar, setIsSidebar }) {
-  const visibility = isSidebar
-    ? "md:hidden block bg-gray-100"
-    : "md:hidden block";
+export function SidebarSection({ isSidebar, setIsSidebar,className }) {
 
   return (
-    <div>
+    <div className="relative">
       {/* {isSidebar && (
         <div
           className="fixed inset-0 bg-black/50 z-40"
@@ -23,12 +20,11 @@ export function SidebarSection({ isSidebar, setIsSidebar }) {
         />
       )} */}
       <div
-        className={`${visibility} w-48 h-screen flex flex-col items-center justify-between  top-0 left-0 bg-white shadow-md p-4 `}
-      >
+        className={className}>
         {isSidebar && (
           <button
             onClick={() => setIsSidebar(!isSidebar)}
-            className="absolute right-0 top-0 cursor-pointer sm:p-3 p-4 bg-gray-200 text-red-500 hover:bg-gray-100 hover:font-bold  rounded-full "
+            className="absolute -right-5 top-2 cursor-pointer sm:p-3 p-4 bg-gray-200 text-red-500 hover:bg-gray-100 hover:font-bold  rounded-full "
           >
             <RxCross2 size={25} />
           </button>

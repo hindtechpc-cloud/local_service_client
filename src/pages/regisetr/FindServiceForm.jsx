@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Form, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Navigate, useNavigate } from "react-router-dom"
 
 const schema = z.object({
   name: z.string().min(2),
@@ -13,12 +14,14 @@ const schema = z.object({
 })
 
 export default function FindServiceForm() {
+  const navigate=useNavigate();
   const form = useForm({
     resolver: zodResolver(schema),
   })
 
   const onSubmit = (data) => {
     console.log("Customer Data:", data)
+    navigate("/my-bookings")
   }
 
   return (

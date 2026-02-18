@@ -7,6 +7,8 @@ import BookServiceman from "./pages/BookServiceman";
 import MyBookings from "./pages/MyBookings";
 import LandingPage from "./pages/regisetr/LandingPage";
 import Login from "./pages/Login";
+import ServiceProviderDashboard from "./pages/ServiceProdiderDashboard";
+import Layout from "./pages/dashboard/Layout";
 export default function RoutePath() {
   return (
     <Routes>
@@ -14,6 +16,14 @@ export default function RoutePath() {
       <Route path="/create-account" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/services/:serviceName" element={<FindProfessionals />} />
+      <Route
+        path="/service-provider-dashboard"
+        element={
+          <Layout>
+            <ServiceProviderDashboard />
+          </Layout>
+        }
+      />
 
       <Route path="/profile/:id" element={<ProfessionalProfile />} />
       <Route path="/book-serviceman" element={<BookServiceman />} />
