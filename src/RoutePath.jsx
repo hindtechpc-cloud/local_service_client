@@ -9,6 +9,8 @@ import LandingPage from "./pages/regisetr/LandingPage";
 import Login from "./pages/Login";
 import ServiceProviderDashboard from "./pages/ServiceProdiderDashboard";
 import Layout from "./pages/dashboard/Layout";
+import EarningsPage from "./pages/dashboard/serviceProvider/EarningsPage";
+import ProfilePro from "./pages/dashboard/serviceProvider/profile/ProfilePro";
 export default function RoutePath() {
   return (
     <Routes>
@@ -21,6 +23,22 @@ export default function RoutePath() {
         element={
           <Layout>
             <ServiceProviderDashboard />
+          </Layout>
+        }
+      />
+      <Route
+        path="/service-provider-dashboard/earnings"
+        element={
+          <Layout>
+            <EarningsPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/service-provider-dashboard/profile"
+        element={
+          <Layout>
+            <ProfilePro />
           </Layout>
         }
       />

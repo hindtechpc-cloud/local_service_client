@@ -128,9 +128,9 @@ export default function ServiceProviderDashboard() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <VerificationCard name="Marcus Chen" role="Electrician · 2d ago" />
-            <VerificationCard name="Sarah Jenkins" role="Math Tutor · 5h ago" />
-            <VerificationCard name="David Lee" role="Plumber · 1d ago" />
+            <VerificationCard image="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" name="Marcus Chen" role="Electrician · 2d ago" />
+            <VerificationCard image="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" name="Sarah Jenkins" role="Math Tutor · 5h ago" />
+            <VerificationCard image="https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp" name="David Lee" role="Plumber · 1d ago" />
           </div>
         </div>
 

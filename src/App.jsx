@@ -6,8 +6,8 @@ import Locationbar from "./components/layout/Locationbar";
 // import FindProfessionals from "./pages/FindProfessionals";
 export default function App() {
   const url = useLocation();
-  const commomPath = ["/service-provider-dashboard"];
-  const isNavAndTopBar = commomPath.includes(url.pathname);
+  const commomPath = ["/service-provider-dashboard",];
+  const isNavAndTopBar = url.pathname.startsWith(commomPath);
   return (
     <>
   

@@ -5,22 +5,17 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { RxCross2 } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from "../../assets/logo.jpeg";
 
-export function SidebarSection({ isSidebar, setIsSidebar,className }) {
-
+export function SidebarSection({ isSidebar, setIsSidebar, className }) {
+  const url = useLocation();
+  const redirectTo = "/service-provider-dashboard";
+  const isDashboard = url.pathname == redirectTo;
   return (
-    <div className="relative">
-      {/* {isSidebar && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40"
-          onClick={() => setIsSidebar(false)}
-        />
-      )} */}
-      <div
-        className={className}>
+    <div className="relative ">
+      <div className={className}>
         {isSidebar && (
           <button
             onClick={() => setIsSidebar(!isSidebar)}
@@ -56,25 +51,42 @@ export function SidebarSection({ isSidebar, setIsSidebar,className }) {
               <NavigationMenuLink asChild className={"w-44"}>
                 <Link
                   className="focus:text-red-500 focus:underline no-underline"
-                  to="/explore"
+                  // to={!isDashboard ? "/explore" : redirectTo}
+                  to={
+                    !url.pathname.startsWith(redirectTo)
+                      ? "/explore"
+                      : "/service-provider-dashboard"
+                  }
                 >
-                  Explore
+                  {url.pathname.startsWith(redirectTo)
+                    ? "Dashboard"
+                    : "Explore"}
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild className={"w-44"}>
                 <Link
                   className="focus:text-red-500 focus:underline no-underline"
-                  to="/my-bookings"
+                  to={
+                    !url.pathname.startsWith(redirectTo)
+                      ? "/my-bookings"
+                      : "/service-provider-dashboard/earnings"
+                  }
                 >
-                  Booking
+                  {url.pathname.startsWith(redirectTo)
+                    ? "Earnings"
+                    : "Bookings"}
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild className={"w-44"}>
                 <Link
                   className="focus:text-red-500 focus:underline no-underline"
-                  to="/profile"
+                 to={
+                    !url.pathname.startsWith(redirectTo)
+                      ? "/profile"
+                      : "/service-provider-dashboard/profile"
+                  }
                 >
-                  Profile
+               Profile
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuList>
