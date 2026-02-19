@@ -3,8 +3,7 @@ import { ArrowUpRight, Wallet } from "lucide-react";
 
 export default function EarningsCardPro() {
   return (
-   <div>
-     <Card className="rounded-2xl bg-teal-700 text-white shadow-lg">
+    <Card className="rounded-2xl bg-teal-700 text-white shadow-lg">
       <CardContent className="p-8 space-y-6">
         
         <div className="flex justify-between items-center">
@@ -21,6 +20,5 @@ export default function EarningsCardPro() {
 
       </CardContent>
     </Card>
-   </div>
   );
 }
