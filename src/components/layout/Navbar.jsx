@@ -91,9 +91,9 @@ export function Navbar() {
       {isSidebar && (
         <div
           isSidebar={isSidebar}
-          className={`${visibility} fixed z-50 w-48  h-screen flex flex-col items-center justify-between  top-0 left-0 bg-white shadow-md p-4 `}
+          className={`${visibility} fixed z-50 w-48  h-screen  top-0 left-0 bg-white shadow-md px-2`}
         >
-          <SidebarSection isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
+          <SidebarSection isSidebar={isSidebar} setIsSidebar={setIsSidebar} className={""} />
         </div>
       )}
     </div>

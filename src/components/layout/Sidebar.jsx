@@ -15,7 +15,7 @@ export function SidebarSection({ isSidebar, setIsSidebar, className }) {
   const isDashboard = url.pathname == redirectTo;
   return (
     <div className="relative ">
-      <div className={className}>
+      <div className={` h-screen ${className}`}>
         {isSidebar && (
           <button
             onClick={() => setIsSidebar(!isSidebar)}
@@ -63,6 +63,14 @@ export function SidebarSection({ isSidebar, setIsSidebar, className }) {
                     : "Explore"}
                 </Link>
               </NavigationMenuLink>
+             {url.pathname.startsWith(redirectTo)&& <NavigationMenuLink asChild className={"w-44"}>
+                <Link
+                  className="focus:text-red-500 focus:underline no-underline"
+                  to={"/service-provider-dashboard/add-services"}
+                >
+                  Add Services
+                </Link>
+              </NavigationMenuLink>}
               <NavigationMenuLink asChild className={"w-44"}>
                 <Link
                   className="focus:text-red-500 focus:underline no-underline"
@@ -80,24 +88,26 @@ export function SidebarSection({ isSidebar, setIsSidebar, className }) {
               <NavigationMenuLink asChild className={"w-44"}>
                 <Link
                   className="focus:text-red-500 focus:underline no-underline"
-                 to={
+                  to={
                     !url.pathname.startsWith(redirectTo)
                       ? "/profile"
                       : "/service-provider-dashboard/profile"
                   }
                 >
-               Profile
+                  Profile
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <Link
-          className="w-44 hover:bg-gray-100 py-2 text-center rounded focus:text-red-500 focus:underline no-underline"
-          to="/login"
-        >
-          Login
-        </Link>
+        <div className="absolute bottom-7 left-2 w-44 ">
+          <Link
+            className="px-10 hover:bg-gray-100 py-2 text-center rounded focus:text-red-500 focus:underline no-underline"
+            to="/login"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
